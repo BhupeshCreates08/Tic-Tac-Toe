@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #588157;
+    font-family: 'Times New Roman' ;
+    font-style: italic;
+}
+
+body {
+    background-color: #dad7cd;
+    text-align: center;
+}
+
+.container {
+    height: 70vh;
+    display: flex; /* To display all the boxes in same line */
+    justify-content: center ;
+    align-items: center ;
+}
+
+.games {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex; /* To display all the boxes in same line */
+    flex-wrap: wrap; /* To display boxes in next line if there is no enough space */
+    gap: 1vmin;
+    justify-content: center ;
+    align-items: center ;
+}
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem #a3b18a ;
+    font-size: 8vmin;
+    font-family: Arial;
+    transition: transform 0.2s ease;
+}
+
+.box:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.reset-btn {
+    font-size: 1.25rem;
+    padding: 1rem;
+    background-color: #52b69a;
+    border: none;
+    border-radius: 1rem;
+    color: gainsboro;
+}
+
+.New-btn {
+    font-size: 1.25rem;
+    padding: 1rem;
+    background-color: #52b69a;
+    border: none;
+    border-radius: 1rem;
+    color: gainsboro;
+}
+
+.reset-btn, .New-btn {
+    transition: transform 0.2s ease;
+}
+
+.reset-btn:hover, .New-btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+#msg {
+    font-size: 6vmin;
+    color: rgb(80, 124, 5);
+}
+
+#msg {
+    animation: fadeIn 0.5s ease;
+}
+
+.msg-container{
+    height: 10vmin;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
